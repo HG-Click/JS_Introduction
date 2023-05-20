@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt.BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica de calculos</title>
+</head>
+    <style>
+        body {
+            background: rgb(24, 202, 113);
+        }
+        h1 {
+            font: 35px Arial;
+        }
+        p {
+            font: 20px Arial;
+        }
+        div#res {
+            font: 15px Arial;
+            margin-top: 10px;
+        }
+        div#res2 {
+            font: 15px Arial;
+            margin-top: 10px;
+        }
+        div#res3 {
+            font: 15px Arial;
+            margin-top: 10px;
+        }
+
+    </style>
+<body>
+    <h1><strong>Calculadora</strong></h1>
+        <p>Soma de valores</p>
+            <input type="number" name="tn01" id="tn01"> +
+            <input type="number" name="tn02" id="tn02">
+            <input type="button" value="Somar" onclick="somar()">
+            <div id="res">Inclua os valores acima para calcular o resultado</div>
+            <script>
+                function somar() {
+                    var tn01 = window.document.getElementById('tn01')
+                    var tn02 = window.document.getElementById('tn02')
+                    var n1 = Number(tn01.value)
+                    var n2 = Number(tn02.value)
+                    var r = n1 + n2
+                    res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${r}</strong>`
+            }
+            </script>
+
+        <p>Subtração de valores</p>
+            <input type="number" name="tn03" id="tn03"> -
+            <input type="number" name="tn04" id="tn04"> 
+            <input type="button" value="Subtrair" onclick="sub()">
+            <div id="res1">Inclua os valores acima para calcular o resultado</div>
+            <script>
+                function sub() {
+                    var tn01 = window.document.getElementById('tn03')
+                    var tn02 = window.document.getElementById('tn04')
+                    var n1 = Number(tn01.value)
+                    var n2 = Number(tn02.value)
+                    var r = n1 - n2
+                    res1.innerHTML = `A diferença entre ${n1} e ${n2} é de <strong>${r}</strong>`
+                }
+            </script>
+
+        <p>Multiplicação de valores</p>
+        <input type="number" name="tn05" id="tn05"> *
+        <input type="number" name="tn06" id="tn06"> 
+        <input type="button" value="Multiplicar" onclick="mult()">
+        <div id="res2">Inclua os valores acima para calcular o resultado</div>
+        <script>
+            function mult() {
+                var tn01 = window.document.getElementById('tn05')
+                var tn02 = window.document.getElementById('tn06')
+                var n1 = Number(tn01.value)
+                var n2 = Number(tn02.value)
+                var r = n1 * n2
+                res2.innerHTML = `A multiplicação entre ${n1} por ${n2} é de <strong>${r}</strong>`
+            }
+            </script>
+
+        <p>Divisão de valores</p>
+        <input type="number" name="tn07" id="tn07"> /
+        <input type="number" name="tn08" id="tn08">
+        <input type="button" value="Dividir" onclick="div()">
+        <div id="res3">Inclua os valores acima para calcular o resultado</div>
+        <script>
+            function div() {
+                var tn01 = window.document.getElementById('tn07')
+                var tn02 = window.document.getElementById('tn08')
+                var n1 = Number(tn01.value)
+                var n2 = Number(tn02.value)
+                var r = n1 / n2
+                res3.innerHTML = `A divisão entre ${n1} por ${n2} é de <strong>${r}</strong>`
+            }
+        </script>
+</body>
+</html>

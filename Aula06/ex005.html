@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>  <!-- Titulo da Web -->
+</head>
+    <style>
+        body {
+            background: rgb(0, 255, 179);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+<body>    <!-- TAGAS para o corpo do HTML -->
+    <H1>Iniciando estudos com DOM</H1>    <!-- Titulo do corpo-->
+    <P>Aqui vai o resultado</P>    <!-- Paragrafo 0 -->
+    <p>Apresendno a usar o <strong>DOM</strong> em JavaScript.</p> <!-- Paragrafo 1 (Negrito) -->
+    <div id="msg">Clique em mim</div> 
+    <!-- ID representada por # e CLASS por . (ponto)-->
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] 
+        //Ultilizar conchete para atribur qual titulo considerar
+        var p2 = window.document.getElementsByTagName('p')[1]
+        /*
+        var d = window.document.getElementById("msg")
+        d.style.background= 'Black'
+       d.innerText = 'Alterando ID'
+       */
+        var d = window.document.querySelector('div#msg') //Mais recente
+        d.style.background = 'blue'
+    </script>   
+</body>
+</html>

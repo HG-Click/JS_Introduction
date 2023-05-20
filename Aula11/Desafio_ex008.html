@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    <p>Informa qual o seu país:</p>
+    <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Descrever" onclick="nac()">
+    <dev id="res"></dev>
+    <script>
+        function nac() {
+            var txtn = window.document.getElementById('txtn')
+            var res = window.document.querySelector('dev#res')
+            r = txtn.value
+            res.innerHTML = `<p>Você vive no país: <strong>${r}</strong><p>`
+                if (r != "Brasil") {
+                    res.innerHTML += `Você é <strong>estrangeiro</strong>, por favor apresente seu passaporte!`
+                } else {
+                    res.innerHTML += `Você é <strong>brasileiro</strong>, Seja bem vindo!`
+                }
+        }
+    </script>
+</body>
+</html>
