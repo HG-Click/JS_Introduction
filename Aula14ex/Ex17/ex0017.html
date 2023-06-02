@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de exercicio</title>
-    <link rel="stylesheet" href="estilo17.css">
+    <link rel="stylesheet" href="estilo17.css"><!--SCRIPT CSS considerado de front-->
 </head>
 <body>
     <header>
-        <h1>Titulo 111</h1>
+        <!--Titulo da página-->
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            teste...
+            <!--Incluindo os campos de interação-->
+            <p>Número: <input type="text" name="num" id="txtn"> <!--Campo que o usuario colocará o numero a ser multiplicado-->
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p><!--Botão que inicia o calculo após o clique (função tabuada no JS)-->
         </div>
         <div>
-            teste
+            <!--Espaço onde vai aparecer os resultados da tabuada-->
+            <select name="tabuada" id="seltab" size="11">
+            <option>Digite um número acima</option>
+            </select><!--Tamanho 11 para mostrar os resulado de 0 até 10-->
         </div>
     </section>
     <footer>
-        <p>&copy; CursoemVideo</p>
+        <p>&copy; CursoemVideo</p><!--Campos onde vai aparecer o resultado da tabuada-->
     </footer>
-    <script src="scrpit17.js"></script>
+    <script src="scrpit17.js"></script><!--SCRIPT JS considerado de back-->
 </body>
 </html>
