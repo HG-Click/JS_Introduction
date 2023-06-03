@@ -1,7 +1,9 @@
 //Usando a estrutura de repetição para as posições
 let valores = [8,1,7,8,5]
 
+valores.sort()
 console.log(valores)
+
 
 /*
 //CONTAGEM MANUAL
