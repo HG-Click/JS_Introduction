@@ -8,11 +8,11 @@ function ação (AQUI FICARÁ OS PARÂMETROS){
 
 }
 */
-function parimpar(n){ //Dentro dos parenteses está o parâmetro
-    if (n%2 == 0){ //Ação realizada
+function parimpar(n){ //PARÂMETRO:: Dentro dos parenteses está o PARÂMETRO
+    if (n%2 == 0){ //AÇÃO::: Alçao realizada
         return 'Par!'
     } else {
-        return 'ímpar!'//Retorno ou resultado da função
+        return 'ímpar!'//RETORNO:::O resultado da função
     }
 }
-console.log(parimpar(56)) //Chamada, linha que fará o disparo da função "parimp"
+console.log(parimpar(56)) //CHAMADA:: linha que fará o disparo da função "parimp"
