@@ -1,5 +1,5 @@
 let relatorio = [] //Variavel composta a ser preenchida com os valores adicionados  pelo usuario
-relatorio.sort()
+
 
 function adicionar () {
     let num = document.getElementById('numtxt')
@@ -16,25 +16,21 @@ function adicionar () {
         item.text = `Valor ${n} adicionado`
         lista.appendChild(item)
         relatorio.push(n)
+        relatorio.sort(function(a,b){return a-b})
         }
     }
 }
 
 function maior (n) {
-    return n
+    let pos = Number(n.length)
+    return n[pos]
 }
 
 function finalizar () {
-    var res = window.document.querySelector('div#res')
-    res.innerHTML = `VETOR atual igual a ${relatorio}`
-
-/*
-    relatorio.sort()
     var res = window.document.querySelector('div#res')
     res.innerHTML = `Ao todo, temos <strong>${relatorio.length}</strong> números adicionados.
     <p>O maior valor informado foi ${maior(relatorio)}</p>
     <p>O menor valor informado foi ${relatorio}</p>
     <p>Somando todos os valores, temos ${relatorio}</p>
     <p>A média dos valores digitados é ${relatorio}.</p>`
-*/
 }

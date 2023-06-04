@@ -25,8 +25,7 @@ console.log(`A quantidade de elementos deste VETOR é igual a ${num.length} posi
 num.sort() //Deixa os elementos ordenados SAIDA: [3, 4, 5, 6, 7]
 console.log(`Colocando esse vetor ordenado fica ${num.sort()}`)
 
-//Busca de valores no VETOR
-let pos = num.indexOf(2)
+let pos = num.indexOf(2) //Mostrar a posição do valor entre parenteses
     if (pos == -1){
     console.log(`O valor informado não foi encontrado`)
     }else{
