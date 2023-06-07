@@ -16,24 +16,46 @@ function adicionar () {
         item.text = `Valor ${n} adicionado`
         lista.appendChild(item)
         relatorio.push(n)
-        relatorio.sort(function(a,b){return a-b})
         }
     }
 }
 
-function maior (n) {
-    let pos = 0
-    while (pos < n.length) {
-        pos++
+function maior (x){
+    relatorio.sort(function(a,b){return b-a})
+    return x[0]
+}
+
+function menor (y){
+    relatorio.sort(function(a,b){return a-b})
+    return y[0]
+}
+
+function soma (n) {
+    relatorio.sort(function(a,b){return a-b})
+    let soma = 0
+    for (let pos = 0; pos < n.length; pos++) {
+        soma += n[pos]
     }
-    return maior[pos]
+    return soma
+}
+
+function media (m) {
+    let soma = 0
+    for (let i = 0; i < m.length; i++) {
+        soma += m[i]
+    }
+    const media = soma / m.length
+    return media
 }
 
 function finalizar () {
     var res = window.document.querySelector('div#res')
     res.innerHTML = `Ao todo, temos <strong>${relatorio.length}</strong> números adicionados.
-    <p>O maior valor informado foi ${maior(relatorio)}</p>
-    <p>O menor valor informado foi ${relatorio[0]}</p>
-    <p>Somando todos os valores, temos ${relatorio}</p>
-    <p>A média dos valores digitados é ${relatorio}.</p>`
+    <p>O maior valor informado foi <strong>${maior(relatorio)}</strong></p>
+    <p>O menor valor informado foi <strong>${menor(relatorio)}</strong></p>
+    <p>Somando todos os valores, temos <strong>${soma(relatorio)}</strong></p>
+    <p>A média dos valores digitados é <strong>${media(relatorio)}</strong></p>`
 }
+
+
+
