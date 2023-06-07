@@ -22,15 +22,18 @@ function adicionar () {
 }
 
 function maior (n) {
-    let pos = Number(n.length)
-    return n[pos]
+    let pos = 0
+    while (pos < n.length) {
+        pos++
+    }
+    return maior[pos]
 }
 
 function finalizar () {
     var res = window.document.querySelector('div#res')
     res.innerHTML = `Ao todo, temos <strong>${relatorio.length}</strong> números adicionados.
     <p>O maior valor informado foi ${maior(relatorio)}</p>
-    <p>O menor valor informado foi ${relatorio}</p>
+    <p>O menor valor informado foi ${relatorio[0]}</p>
     <p>Somando todos os valores, temos ${relatorio}</p>
     <p>A média dos valores digitados é ${relatorio}.</p>`
 }
