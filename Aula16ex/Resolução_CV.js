@@ -44,14 +44,18 @@ function finalizar() {
         let soma = 0
         let media = 0
         for(let pos in valores) { //Analisa cada item do VETOR e retorna o valor que atenda os criterios a seguir 
+            soma  += valores[pos] //Realiza a soma  para cada VETOR processado
             if (valores[pos] > maior)  //Faz uma varredura (laço de percurso) item a item até retornar o maior de todos
-            maior = valores[pos]
+            maior = valores[pos] //Retorna o ultimo valor da posição que atende o criterio 
             if (valores[pos] < menor)
             menor = valores[pos]
         }
+        media = soma / tot
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
-        res.innerHTML
-
+        res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p>Somando  todos os valores, temos  ${soma}.</p>`
+        res.innerHTML += `<p>A média dos valores digitado é ${media}.</p>`
     }
 }
