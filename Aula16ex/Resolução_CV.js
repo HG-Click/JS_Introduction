@@ -1,7 +1,7 @@
 let num = document.querySelector('input#fnum')
 let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
-let valores = []
+let valores = [] //Aqui está o array
 
 function isNumero(n){
     if(Number(n) >= 1 && Number(n) <= 100) { //Verica se o numero é maior que 0 e menos que 100
@@ -22,7 +22,7 @@ function inLista (n, l) {
 
 function adicionar () {
     if (isNumero(num.value)  && !inLista(num.value, valores)){ // Na função lista  o sinal de esclamação "!" significa NÃO
-        valores.push(Number(num.value))//Inclui o valor adicionado no ultimo elemento do VETOR
+        valores.push(Number(num.value))//Inclui o valor adicionado no ultimo índice do VETOR
         let item = document.createElement('option') //Cria um option chamado item para inclui o valor na lista
         item.text = `Valor ${num.value} adicionado.` //Inclui o valor no item
         lista.appendChild(item)//Mostra o item na lista
