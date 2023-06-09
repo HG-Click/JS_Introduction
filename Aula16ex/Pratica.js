@@ -1,10 +1,10 @@
+let num = document.getElementById('numtxt')
+let lista = document.getElementById('lista')
+let res = window.document.querySelector('div#res')
 let relatorio = [] //Variavel composta a ser preenchida com os valores adicionados  pelo usuario
 
 
 function adicionar () {
-    let num = document.getElementById('numtxt')
-    let lista = document.getElementById('lista')
-
     if (num.value.length == 0) {
     window.alert ('Por favor, digite um número!')
     } else {
@@ -49,7 +49,6 @@ function media (m) {
 }
 
 function finalizar () {
-    var res = window.document.querySelector('div#res')
     res.innerHTML = `Ao todo, temos <strong>${relatorio.length}</strong> números adicionados.
     <p>O maior valor informado foi <strong>${maior(relatorio)}</strong></p>
     <p>O menor valor informado foi <strong>${menor(relatorio)}</strong></p>
