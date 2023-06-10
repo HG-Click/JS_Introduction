@@ -16,14 +16,17 @@
 <body>    <!-- TAGAS para o corpo do HTML -->
     <H1>Iniciando estudos com DOM</H1>    <!-- Titulo do corpo-->
     <P>Aqui vai o resultado</P>    <!-- Paragrafo 0 -->
-    <p>Apresendno a usar o <strong>DOM</strong> em JavaScript.</p> <!-- Paragrafo 1 (Negrito) -->
+    <p>Aprenendo a usar o <strong>DOM</strong> em JavaScript.</p> <!-- Paragrafo 1 (Negrito) -->
     <div id="msg">Clique em mim</div> 
     <!-- ID representada por # e CLASS por . (ponto)-->
     <script>
         var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[0] 
+        corpo.style.background = 'black'
+        var p1 = window.document.getElementsByTagName('p')[0]  //Selecioando objeto por Marca
+        p1.style.color = 'blue'
         //Ultilizar conchete para atribur qual titulo considerar
         var p2 = window.document.getElementsByTagName('p')[1]
+        document.write (p2.innerHTML)
         /*
         var d = window.document.getElementById("msg")
         d.style.background= 'Black'
@@ -31,6 +34,7 @@
        */
         var d = window.document.querySelector('div#msg') //Mais recente
         d.style.background = 'blue'
+        
     </script>   
 </body>
 </html>
